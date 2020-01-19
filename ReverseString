@@ -1,0 +1,38 @@
+package javaBeginners;
+import java.util.*;
+
+public class reverseString {
+	
+	public static void main(String args[])
+	{
+		Scanner sc= new Scanner(System.in);
+		int t = sc.nextInt();
+		
+		String a[] = new String[t];
+		
+		for(int i=0;i<t;i++)
+		{
+			String str= sc.next();
+			String arr[]= str.split("\\.");
+			String s="";
+			
+			for(int j=arr.length-1;j>=0;j--)
+			{
+				if(j==0)
+				{
+					s =s+arr[j];
+				}
+				else
+				{
+					s= s + arr[j] + ".";
+				}
+			}
+			a[i]=s;
+		}
+		
+		for(int i=0;i<t;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}
